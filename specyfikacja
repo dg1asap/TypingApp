@@ -1,0 +1,36 @@
+    0. Temat
+        "Aplikacja do nauki pisania bezwzrokowego dla średniozawanowanych."
+        
+    1 Interfejs aplikacji / modułu
+        - aplikacja graficzna [wxwidget lub GTK+] //obsługują win & linux
+            Menu:
+                1. Wybierz tekst
+                2. Załaduj plik [jeśli starczy mi czasu]
+                3. Tryby nauki
+                [Pozycje, które często się pomija lub są w nich braki podczas nauki]
+                    3.1. Praw & Lewa stona
+                    3.2. Numeryczna
+                    3.3. Góra
+                    3.4. Góra & Dół
+                    3.5. Mix
+    
+    2. Oczekiwany wynik działania programu
+        - sposób prezentacji wyników
+            Dla pozycji menu nr. :
+                1.  - WPM [Word per Minute] & czas pisania
+                    - Wykres Y: WPM
+                            X: czas pisania podzielony na 10 odcinków.
+                    - Wykres Y: średnie WPM w danym dniu
+                            X: data
+                    - Powtórzenia wybranego fragmentu z wykresu 1.
+                    - Powrót do menu.
+                2.  - Podanie ścieżki.
+                3.  - Odsyła do menu
+                [Wykresy gnuplot]
+
+    3. Analiza obiektów występujących w trakcie działania aplikacji
+       
+Wxwidget
+    szereg różnych obieków generujących okna, przyciski itp.
+
+///// Dokumentacja w trakcie tworzenia.
