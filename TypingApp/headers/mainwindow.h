@@ -2,11 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include "addfilewindow.h"
-#include "learnmodewindow.h"
-#include "textselectwindow.h"
-#include "infowindow.h"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,7 +29,5 @@ private slots:
 private:
     Ui::MainWindow *ui;
     AddFileWindow *addFileWindow;
-    LearnModeWindow *learnModeWindow;
-    TextSelectWindow *textSelectWindow;
 };
 #endif // MAINWINDOW_H

@@ -21,20 +21,15 @@ void MainWindow::on_addFileButton_clicked()
 
 void MainWindow::on_infoButton_clicked()
 {
-    hide();
+    QMessageBox::information(this, "Info", " sadf\nfdasf\nadf \n sadaf");
 }
 
 void MainWindow::on_textSelectButton_clicked()
 {
-    hide();
-    textSelectWindow = new TextSelectWindow(this);
-    textSelectWindow->show();
 }
 
 void MainWindow::on_learnModeButton_clicked()
 {
     hide();
-    learnModeWindow = new LearnModeWindow(this);
-    learnModeWindow->show();
 
 }

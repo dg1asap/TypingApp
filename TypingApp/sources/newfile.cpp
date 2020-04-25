@@ -1,5 +1,5 @@
-#include "../headers/newfile.h"
 #include <fstream>
+#include "../headers/newfile.h"
 
 newFile::newFile(std::string userPath) : path(userPath){
     FileInfo statisticalData();
@@ -8,7 +8,7 @@ newFile::newFile(std::string userPath) : path(userPath){
 void newFile::create(){
     statisticalData.infoFromNewFile(path.returnPath());
 
-    std::fstream data("../files/data.txt", std::ios::out | std::ios::app);     //app - nadpisywanie
+    std::fstream data("../files/textsInfo.txt", std::ios::out | std::ios::app);     //app - nadpisywanie
     data << path.retrunFileName() << " "
          << statisticalData.numberOfcharacter() << " "
          << statisticalData.numberOfwords() << " "
