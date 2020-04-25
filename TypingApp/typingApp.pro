@@ -19,6 +19,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # w .pro i plikach naglowkowych.
 
 SOURCES += \
+    sources/selecttextwindow.cpp \
     sources/addfilewindow.cpp \
     sources/fileinfo.cpp \
     sources/localisation.cpp \
@@ -31,11 +32,13 @@ HEADERS += \
     headers/fileinfo.h \
     headers/localisation.h \
     headers/mainwindow.h \
-    headers/newfile.h
+    headers/newfile.h \
+    headers/selecttextwindow.h
 
 FORMS += \
     forms/addfilewindow.ui \
-    forms/mainwindow.ui
+    forms/mainwindow.ui \
+    forms/selecttextwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
