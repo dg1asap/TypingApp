@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QMessageBox>
 #include <QMainWindow>
 #include "addfilewindow.h"
 
@@ -18,11 +19,8 @@ public:
 
 private slots:
     void on_addFileButton_clicked();
-
     void on_infoButton_clicked();
-
     void on_textSelectButton_clicked();
-
     void on_learnModeButton_clicked();
 
 private:

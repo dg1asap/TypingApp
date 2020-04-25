@@ -21,7 +21,8 @@ void MainWindow::on_addFileButton_clicked()
 
 void MainWindow::on_infoButton_clicked()
 {
-    hide();
+    QMessageBox::information(this, "Info",
+    "	Aplikcaja do nauki pisania bezwzrokowego\n\nPierwsze zadanie\n	programistyczne z PROE\n\nProwadzacy: Marcin Baczyk\nAutor: Damina Górski\n\nInstrukcja:\n\n	Loading...\n\n			2020\n			ver1.0.");
 }
 
 void MainWindow::on_textSelectButton_clicked()
