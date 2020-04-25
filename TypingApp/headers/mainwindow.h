@@ -3,10 +3,6 @@
 
 #include <QMainWindow>
 #include "addfilewindow.h"
-#include "learnmodewindow.h"
-#include "textselectwindow.h"
-#include "infowindow.h"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

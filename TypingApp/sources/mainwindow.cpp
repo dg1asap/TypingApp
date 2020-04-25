@@ -27,12 +27,10 @@ void MainWindow::on_infoButton_clicked()
 void MainWindow::on_textSelectButton_clicked()
 {
     hide();
-    textSelectWindow->show();
 }
 
 void MainWindow::on_learnModeButton_clicked()
 {
     hide();
-    learnModeWindow->show();
 
 }
