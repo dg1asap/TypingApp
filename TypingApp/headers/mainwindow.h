@@ -32,7 +32,5 @@ private slots:
 private:
     Ui::MainWindow *ui;
     AddFileWindow *addFileWindow;
-    LearnModeWindow *learnModeWindow;
-    TextSelectWindow *textSelectWindow;
 };
 #endif // MAINWINDOW_H
