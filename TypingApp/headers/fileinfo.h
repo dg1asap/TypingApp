@@ -10,6 +10,7 @@ class FileInfo
     int words = 0;
 public:
     FileInfo();
+    FileInfo(int endOfLineCharacters_, int characters_, int words_);
 
     void infoFromNewFile(std::string path);
     int numberOfendOfLineCharacters();
