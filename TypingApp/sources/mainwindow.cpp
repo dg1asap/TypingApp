@@ -27,11 +27,12 @@ void MainWindow::on_infoButton_clicked()
 
 void MainWindow::on_textSelectButton_clicked()
 {
-    hide();
+    selectTextWindow = new SelectTextWindow("../files/textsInfo.txt", "../files/texts/", this);
+    selectTextWindow->show();
 }
 
 void MainWindow::on_learnModeButton_clicked()
 {
-    hide();
-
+    selectTextWindow = new SelectTextWindow("../files/learnModeInfo.txt", "../files/learnMode/", this);
+    selectTextWindow->show();
 }

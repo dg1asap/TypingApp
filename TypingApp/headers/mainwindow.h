@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QMainWindow>
 #include "addfilewindow.h"
+#include "selecttextwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,6 +26,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
     AddFileWindow *addFileWindow;
+    SelectTextWindow *selectTextWindow;
 };
 #endif // MAINWINDOW_H
