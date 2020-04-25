@@ -5,6 +5,8 @@
 #include <QListWidgetItem>
 #include <string>
 
+#include "../headers/typingwindow.h"
+
 namespace Ui {
 class SelectTextWindow;
 }
@@ -26,8 +28,11 @@ public:
 private slots:
     void on_listWidget_itemDoubleClicked(QListWidgetItem *item);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::SelectTextWindow *ui;
+    TypingWindow *typingWindow;
 };
 
 #endif // SELECTTEXTWINDOW_H

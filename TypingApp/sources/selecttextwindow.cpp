@@ -32,12 +32,35 @@ SelectTextWindow::SelectTextWindow(std::string pathToData_, std::string pathToTe
     data.close();
 }
 
+void SelectTextWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+    hide();
+    QString qs = item->text();
+    qs = qs.remove('\u0000');    //https://doc.qt.io/qt-5/qstring.html#remove// Uwaga! usuwa tez male;
+
+    std::string s = qs.toUtf8().constData();
+    std::string fileName;
+    int endOfLineCharacters_, characters_, words_;
+
+    std::istringstream fullInfo(s);
+    fullInfo >> fileName >> characters_
+             >> words_ >> endOfLineCharacters_;
+
+    FileInfo fileInfoInData_(endOfLineCharacters_, characters_, words_);
+
+    std::string userFilePath = pathToTextDirectory + fileName;
+    Localisation pathToFileInData_(userFilePath);
+
+    typingWindow = new TypingWindow(fileInfoInData_, pathToFileInData_, this);
+    typingWindow->show();
+}
+
+void SelectTextWindow::on_pushButton_clicked()
+{
+    hide();
+}
+
 SelectTextWindow::~SelectTextWindow()
 {
     delete ui;
-}
-
-void SelectTextWindow::on_listWidget_itemDoubleClicked(QListWidgetItem *item)
-{
-
 }
