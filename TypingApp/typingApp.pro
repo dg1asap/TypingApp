@@ -21,27 +21,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     sources/addfilewindow.cpp \
     sources/fileinfo.cpp \
-    sources/learnmodewindow.cpp \
     sources/localisation.cpp \
     sources/main.cpp \
     sources/mainwindow.cpp \
-    sources/newfile.cpp \
-    sources/textselectwindow.cpp
+    sources/newfile.cpp
 
 HEADERS += \
     headers/addfilewindow.h \
     headers/fileinfo.h \
-    headers/learnmodewindow.h \
     headers/localisation.h \
     headers/mainwindow.h \
-    headers/newfile.h \
-    headers/textselectwindow.h
+    headers/newfile.h
 
 FORMS += \
     forms/addfilewindow.ui \
-    forms/learnmodewindow.ui \
-    forms/mainwindow.ui \
-    forms/textselectwindow.ui
+    forms/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
