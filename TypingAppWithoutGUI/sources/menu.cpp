@@ -1,10 +1,6 @@
 #include "menu.h"
 
-Menu::Menu(){}
-
-Menu::~Menu(){}
-
-void Menu::show(){
+Menu::Menu(){
     std::cout << "Please select option:\n"
         << "1. Select Text\n"
         << "2. Learn Mode\n"
@@ -12,7 +8,10 @@ void Menu::show(){
         << "4. Info\n"
         << "5. Quit\n";
     std::cin >> item;
-    
-    selectMenuItem = new SelectMenuItem(item); 
+}
 
+Menu::~Menu(){}
+
+void Menu::select(){
+    selectMenuItem = new SelectMenuItem(item); 
 }
