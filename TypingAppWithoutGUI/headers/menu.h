@@ -3,10 +3,17 @@
 
 #include <iostream>
 
+#include "selectMenuItem.h"
+
 class Menu{
+    char item = ' ';
+
+    SelectMenuItem * selectMenuItem;
 public:
     Menu();
     ~Menu();
+
+    void show();
 
 };
 
