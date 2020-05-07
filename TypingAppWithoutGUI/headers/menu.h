@@ -1,21 +1,19 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <iostream>
-
 #include "selectMenuItem.h"
 
 class Menu{
-    char item = ' ';
+    menu::main_menu item;
 
-    SelectMenuItem * selectMenuItem;
-    
+    SelectMenuItem * selectMenuItem = nullptr;
+
 public:
     Menu();
     ~Menu();
 
+    void show();
     void select();
-
 };
 
 #endif //MENU_H

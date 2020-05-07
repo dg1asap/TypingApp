@@ -1,13 +1,14 @@
 #ifndef SELECTMENUITEM_H 
 #define SELECTMENUITEM_H 
 
-#include "newfile.h"
+#include "file.h"
+#include "enum.h"
 
 class SelectMenuItem{
-  //  NewFile * newFile; 
+    File * newFile = nullptr; 
 
 public:    
-    SelectMenuItem(char & item);
+    SelectMenuItem(menu::main_menu item);
     ~SelectMenuItem();
 };
 

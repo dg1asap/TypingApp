@@ -2,6 +2,7 @@
 #include "fileinfo.h"
 
 FileInfo::FileInfo(){}
+
 FileInfo::FileInfo(int endOfLineCharacters_ , int characters_, int words_)
     : endOfLineCharacters(endOfLineCharacters_),
       characters(characters_),
@@ -14,8 +15,8 @@ void FileInfo::infoFromNewFile(std::string path)
     std::ifstream userFile(path, std::ios::out);
     userFile.is_open();
 
-    char c = 'c';                    // Nie sprawdzam dostepu poniewaz
-    while(userFile.get(c))          // juz to wczesniej zrobilem.
+    char c = 'c'; // Nie sprawdzam dostepu poniewaz
+    while(userFile.get(c)) // juz to wczesniej zrobilem.
     {
         if(c == '!' || c == '?' || c == ';' || c == '.')
         {

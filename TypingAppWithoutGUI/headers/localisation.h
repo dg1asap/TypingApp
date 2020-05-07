@@ -5,16 +5,18 @@
 
 class Localisation
 {
-   std::string path;
-   std::string fileName;
+   std::string path_;
+   std::string fileName_;
 public:
-    Localisation(std::string userPath);
-
+    Localisation();
+    ~Localisation();
+    
+    void addPath(std::string userPath);
+    
     bool connection();
+
     std::string returnPath();
     std::string retrunFileName();
-
-    ~Localisation();
 };
 
 #endif // LOCALISATION_H

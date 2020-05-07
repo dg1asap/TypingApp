@@ -1,23 +1,26 @@
-#include "../headers/localisation.h"
+#include "localisation.h"
 #include <iostream>
 #include <fstream>
 
-Localisation::Localisation(std::string userPath) : path(userPath){
+Localisation::Localisation(){}
+
+void Localisation::addPath(std::string userPath){
+    path_ = userPath;
     char c = ' ';
-    int i = (path.length());
+    int i = (path_.length());
 
     while(c != '/'){
-        c = path[--i];
+        c = path_[--i];
     }
 
-    while(i != path.length() ){
-        fileName+=path[i+1];
+    while(i != path_.length() ){
+        fileName_+=path_[i+1];
         i++;
     }
 }
 
 bool Localisation::connection(){
-    std::ifstream userFile (path, std::ios::in | std::ios::out);
+    std::ifstream userFile (path_, std::ios::in | std::ios::out);
     if(userFile.good()){
         userFile.close();
         return true;
@@ -27,11 +30,11 @@ bool Localisation::connection(){
 }
 
 std::string Localisation::returnPath(){
-    return path;
+    return path_;
 }
 
 std::string Localisation::retrunFileName(){
-    return fileName;
+    return fileName_;
 }
 
 Localisation::~Localisation(){}

@@ -1,18 +1,33 @@
 #include "selectMenuItem.h"
 
-SelectMenuItem::SelectMenuItem(char & item){
+SelectMenuItem::SelectMenuItem(menu::main_menu item){
     switch(item){
-        case '1': //1. Select Text
-        break;
-        case '2': //2. Learn Mode
-        break;
-        case '3': //3. Add File
-        break;
-        case '4': //4. Info  
-        break;
-        case '5': //5. Quit
-        break;
-    }
+        case menu::select_text:{
+            break;
+        }
+        case menu::learn_mode:{
+            break;
+        }
+        case menu::add_file:{
+            newFile = new File(); 
+            do{
+                newFile -> addNewFileUI();
+                newFile -> addNewFile(); 
+            }while(newFile -> statisticalData ==  nullptr);
+            break;
+        }
+        case menu::info:{
+            break;
+        }
+        case menu::quit:{
+            break;
+        }
+        default:{
+            break;
+        }                    
+    };
 }
 
-SelectMenuItem::~SelectMenuItem(){}
+SelectMenuItem::~SelectMenuItem(){
+    delete newFile;
+}

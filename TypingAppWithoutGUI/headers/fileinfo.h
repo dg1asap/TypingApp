@@ -3,11 +3,11 @@
 
 #include <string>
 
-class FileInfo
-{
+class FileInfo{
     int endOfLineCharacters = 0;         // ! ? . ;
     int characters = 0;
     int words = 0;
+
 public:
     FileInfo();
     FileInfo(int endOfLineCharacters_, int characters_, int words_);
