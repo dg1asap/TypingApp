@@ -5,11 +5,12 @@
 
 File::File(){
     Localisation path();
+    FileInfo statisticalData();
 }
 
 void File::addNewFileUI(){
     system("clear");
-    std::cout << "Enter the path to the file";
+    std::cout << "Enter the path to the file: ";
     
     std::string userPath; 
     std::cin >> userPath;
@@ -19,15 +20,14 @@ void File::addNewFileUI(){
 void File::addNewFile(){
 //*****************Zbieranie_informacji_o_pliku**********
     if((path.connection()) == true){
-        statisticalData = new FileInfo();  
-        statisticalData -> infoFromNewFile(path.returnPath());
+        statisticalData.infoFromNewFile(path.returnPath());
 
 //******************Tworzenie_Pliku**********************
         std::fstream data("../Files/data.txt", std::ios::out | std::ios::app);
         data << path.retrunFileName() << " "
-             << statisticalData -> numberOfcharacter() << " "
-             << statisticalData -> numberOfwords() << " "
-             << statisticalData -> numberOfendOfLineCharacters() << "\n";
+             << statisticalData.numberOfcharacter() << " "
+             << statisticalData.numberOfwords() << " "
+             << statisticalData.numberOfendOfLineCharacters() << "\n";
         data.close();
  
         std::string convertedFile = "../Files/texts/";
@@ -45,5 +45,5 @@ void File::addNewFile(){
 
 File::~File(){
 //    delete path;
- //   delete statisticalData;
+    //delete statisticalData;
 };

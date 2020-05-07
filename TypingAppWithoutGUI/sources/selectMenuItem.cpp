@@ -1,6 +1,14 @@
 #include "selectMenuItem.h"
 
-SelectMenuItem::SelectMenuItem(menu::main_menu item){
+SelectMenuItem::SelectMenuItem(){
+    File newFile();    
+}
+
+SelectMenuItem::~SelectMenuItem(){
+    //delete newFile;
+}
+
+void SelectMenuItem::addSelectMenuItem(menu::main_menu item){
     switch(item){
         case menu::select_text:{
             break;
@@ -9,11 +17,10 @@ SelectMenuItem::SelectMenuItem(menu::main_menu item){
             break;
         }
         case menu::add_file:{
-            newFile = new File(); 
             do{
-                newFile -> addNewFileUI();
-                newFile -> addNewFile(); 
-            }while(newFile -> statisticalData ==  nullptr);
+                newFile.addNewFileUI();
+                newFile.addNewFile(); 
+            }while(newFile.path.connection() == false);
             break;
         }
         case menu::info:{
@@ -26,8 +33,4 @@ SelectMenuItem::SelectMenuItem(menu::main_menu item){
             break;
         }                    
     };
-}
-
-SelectMenuItem::~SelectMenuItem(){
-    delete newFile;
 }

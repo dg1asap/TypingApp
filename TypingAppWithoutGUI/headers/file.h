@@ -10,7 +10,7 @@ public:
     ~File();
     
     Localisation path;
-    FileInfo * statisticalData = nullptr;
+    FileInfo statisticalData;// = nullptr;
     
     void addNewFileUI();
     void addNewFile();

@@ -10,14 +10,14 @@ class FileInfo{
 
 public:
     FileInfo();
-    FileInfo(int endOfLineCharacters_, int characters_, int words_);
-
+    ~FileInfo();
+    
+    void addInfo(int endOfLineCharacters_, int characters_, int words_);
     void infoFromNewFile(std::string path);
+    
     int numberOfendOfLineCharacters();
     int numberOfcharacter();
     int numberOfwords();
-
-    ~FileInfo();
 };
 
 #endif // FILEINFO_H

@@ -3,11 +3,10 @@
 
 FileInfo::FileInfo(){}
 
-FileInfo::FileInfo(int endOfLineCharacters_ , int characters_, int words_)
-    : endOfLineCharacters(endOfLineCharacters_),
-      characters(characters_),
-      words(words_){
-
+void FileInfo::addInfo(int endOfLineCharacters_ , int characters_, int words_){
+    endOfLineCharacters = endOfLineCharacters_;
+    characters = characters_;
+    words = words_;
 }
 
 void FileInfo::infoFromNewFile(std::string path)

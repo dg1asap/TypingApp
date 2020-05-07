@@ -5,11 +5,13 @@
 #include "enum.h"
 
 class SelectMenuItem{
-    File * newFile = nullptr; 
+    File newFile;// = nullptr; 
 
 public:    
-    SelectMenuItem(menu::main_menu item);
+    SelectMenuItem();
     ~SelectMenuItem();
+    
+    void addSelectMenuItem(menu::main_menu item);
 };
 
 #endif //SELECTMENUITEM_H 

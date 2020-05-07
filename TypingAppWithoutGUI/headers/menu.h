@@ -6,7 +6,7 @@
 class Menu{
     menu::main_menu item;
 
-    SelectMenuItem * selectMenuItem = nullptr;
+    SelectMenuItem selectMenuItem;// = nullptr;
 
 public:
     Menu();
