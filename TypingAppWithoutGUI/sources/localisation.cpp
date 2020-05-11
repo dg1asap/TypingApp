@@ -33,7 +33,7 @@ std::string Localisation::returnPath(){
     return path_;
 }
 
-std::string Localisation::retrunFileName(){
+std::string Localisation::returnFileName(){
     return fileName_;
 }
 

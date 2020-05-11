@@ -13,7 +13,7 @@ public:
     FileInfo statisticalData;// = nullptr;
     
     void addNewFileUI();
-    void addNewFile();
+    void addNewFile(std::string pathToData, std::string pathToDirectory);
 };
 
 #endif // FILE_H

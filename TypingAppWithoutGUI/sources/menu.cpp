@@ -9,6 +9,7 @@ Menu::Menu(){
 Menu::~Menu(){}
 
 void Menu::show(){
+    //system("clear");
     std::cout << "Please select option:\n"
         << "1. Select Text\n"
         << "2. Learn Mode\n"

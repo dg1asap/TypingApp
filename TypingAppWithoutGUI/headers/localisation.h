@@ -16,7 +16,7 @@ public:
     bool connection();
 
     std::string returnPath();
-    std::string retrunFileName();
+    std::string returnFileName();
 };
 
 #endif // LOCALISATION_H

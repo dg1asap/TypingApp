@@ -17,24 +17,23 @@ void File::addNewFileUI(){
     path.addPath(userPath);
 }
 
-void File::addNewFile(){
+void File::addNewFile(std::string pathToData, std::string pathToDirectory){
 //*****************Zbieranie_informacji_o_pliku**********
     if((path.connection()) == true){
         statisticalData.infoFromNewFile(path.returnPath());
 
 //******************Tworzenie_Pliku**********************
-        std::fstream data("../Files/data.txt", std::ios::out | std::ios::app);
-        data << path.retrunFileName() << " "
+        std::fstream data(pathToData, std::ios::out | std::ios::app);
+        data << path.returnFileName() << " "
              << statisticalData.numberOfcharacter() << " "
              << statisticalData.numberOfwords() << " "
              << statisticalData.numberOfendOfLineCharacters() << "\n";
         data.close();
- 
-        std::string convertedFile = "../Files/texts/";
-        convertedFile += path.retrunFileName();
+
+        std::string pathToFileInData = pathToDirectory + path.returnFileName();
  
         std::ifstream From(path.returnPath(), std::ios::binary);
-        std::ofstream To(convertedFile, std::ios::binary);
+        std::ofstream To(pathToFileInData, std::ios::binary);
  
         From >> To.rdbuf();
  

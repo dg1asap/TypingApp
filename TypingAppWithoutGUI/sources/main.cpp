@@ -2,8 +2,11 @@
 
 int main(){
     Menu menu;    
-    menu.show();
-    menu.select();    
-
+   
+    for(;;){
+        menu.show();
+        menu.select();    
+    }
+    
     return 0;
 }
