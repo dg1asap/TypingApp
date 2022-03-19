@@ -1,8 +1,8 @@
     0. Temat
-        "Aplikacja do nauki pisania bezwzrokowego dla średniozawanowanych."
+        "Aplikacja do nauki pisania bezwzrokowego"
         
     1 Interfejs aplikacji / modułu
-        - aplikacja graficzna [wxwidget lub GTK+] //obsługują win & linux
+        - aplikcja terminalowa
             Menu:
                 1. Wybierz tekst
                 2. Załaduj plik [jeśli starczy mi czasu]
@@ -18,19 +18,65 @@
         - sposób prezentacji wyników
             Dla pozycji menu nr. :
                 1.  - WPM [Word per Minute] & czas pisania
+                    
+                    (jeśli wystarczy czasu)
                     - Wykres Y: WPM
                             X: czas pisania podzielony na 10 odcinków.
-                    - Wykres Y: średnie WPM w danym dniu
-                            X: data
-                    - Powtórzenia wybranego fragmentu z wykresu 1.
                     - Powrót do menu.
                 2.  - Podanie ścieżki.
                 3.  - Odsyła do menu
-                [Wykresy gnuplot]
 
     3. Analiza obiektów występujących w trakcie działania aplikacji
-       
-Wxwidget
-    szereg różnych obieków generujących okna, przyciski itp.
 
-///// Dokumentacja w trakcie tworzenia.
+    enum - enum menu, wspópracuje z switch w menu w celu poprawienia czytelnosci kodu
+
+    file - zarzadzanie informacjami o pliku
+
+    fileinfo - info o liczbie znakow w tekscie
+
+    loclisation - informacje o lokalizacji pliku, element file
+
+    menu - wywalonanie menu, zarzadzanie nim
+
+    selectMenuItem - klasa zarzadzjaca mozliwoscia wyboru pozycji lisy
+
+    selecttex - klasa dodajaca mozliwosc dwybrania z bazy danych tekstu do pisania
+    
+    timer - klasa reprezentujaca zegar
+
+
+    4. trudności:
+
+    - GUI
+
+    5. z czego jestem dumny;
+
+    - zarzadzanie plikami
+
+    - sprytne wykorzystanie klasy file w wielku miejscach
+    
+    - zastosowanie różnych metod kopiowania pliku wielku miejscach, wybieranie najwydajniejszych funkcji
+
+    - enum, autorski pomysl stworzenie nowek klasy zarzadzajaca enum
+
+    6. z czego nie jestem dumny:
+
+    - powtrarzajacy sie fstram, nwm jak zrealizowac dostep do funckji zarzadzajcje otwieranie plików w sposob obiektowy
+
+    - metody klasa file i selectItem wedlug mojej opini powinny byc krótsze i bardziej czytelne
+
+    - klasa selct item nie powinna reprezentowac mozliwosc dostepu do okna wpisywania przez uzytkownika tekstu
+
+    ( więcej uwag w komentarzach w kodzie )
+
+    7. czego nie zdarzylem zrealizowac 
+
+    - GUI
+    
+    - analizy wielku wystapien programu, właściwie szeregu klas odpowiedzialnych za zarządzanie tymi procesammi.
+
+    - wykresu
+
+    -learn mode ale jest bardzo prosty w zaincjowaniu max 20 lini kodu
+
+

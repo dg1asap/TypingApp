@@ -15,33 +15,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-# Jesli chcesz skompilowac to przy uzyciu qmaka to zmien '/' na '\'
-# w .pro i plikach naglowkowych.
-
 SOURCES += \
-    sources/typingwindow.cpp \
-    sources/selecttextwindow.cpp \
-    sources/addfilewindow.cpp \
-    sources/fileinfo.cpp \
-    sources/localisation.cpp \
-    sources/main.cpp \
-    sources/mainwindow.cpp \
-    sources/newfile.cpp
+    database.cpp \
+    main.cpp \
+    dialog.cpp \
+    myexception.cpp \
+    reader.cpp \
+    saver.cpp \
+    text.cpp \
+    timer.cpp \
+    typingapp.cpp
 
 HEADERS += \
-    headers/addfilewindow.h \
-    headers/fileinfo.h \
-    headers/localisation.h \
-    headers/mainwindow.h \
-    headers/newfile.h \
-    headers/selecttextwindow.h \
-    headers/typingwindow.h
+    database.h \
+    dialog.h \
+    myexception.h \
+    reader.h \
+    saver.h \
+    text.h \
+    timer.h \
+    typingapp.h
 
 FORMS += \
-    forms/addfilewindow.ui \
-    forms/mainwindow.ui \
-    forms/selecttextwindow.ui \
-    forms/typingwindow.ui
+    dialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
