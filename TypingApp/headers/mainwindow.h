@@ -3,6 +3,7 @@
 
 #include <QMessageBox>
 #include <QMainWindow>
+#include <QMessageBox>
 #include "addfilewindow.h"
 #include "selecttextwindow.h"
 

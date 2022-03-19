@@ -2,7 +2,8 @@
 #include <iostream>
 #include <fstream>
 
-Localisation::Localisation(std::string userPath) : path(userPath){
+Localisation::Localisation(std::string userPath) : path(userPath)
+{
     char c = ' ';
     int i = (path.length());
 
@@ -16,7 +17,8 @@ Localisation::Localisation(std::string userPath) : path(userPath){
     }
 }
 
-bool Localisation::connection(){
+bool Localisation::connection()
+{
     std::ifstream userFile (path, std::ios::in | std::ios::out);
     if(userFile.good()){
         userFile.close();
@@ -26,11 +28,13 @@ bool Localisation::connection(){
     }
 }
 
-std::string Localisation::returnPath(){
+std::string Localisation::returnPath()
+{
     return path;
 }
 
-std::string Localisation::retrunFileName(){
+std::string Localisation::retrunFileName()
+{
     return fileName;
 }
 

@@ -11,8 +11,8 @@ class newFile
 public:
     newFile(std::string userPath);
 
-    Localisation path;
-    void create();
+    Localisation path;   //Musi byc publiczna poniewaz korzysta z niej
+    void create();       // addfilewindow -> newfile -> localisation
 
     ~newFile();
 };

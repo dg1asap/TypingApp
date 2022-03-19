@@ -33,6 +33,7 @@ void MainWindow::on_textSelectButton_clicked()
 
 void MainWindow::on_learnModeButton_clicked()
 {
+    hide();
     selectTextWindow = new SelectTextWindow("../files/learnModeInfo.txt", "../files/learnMode/", this);
     selectTextWindow->show();
 }
